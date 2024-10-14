@@ -64,5 +64,5 @@ const tshirts = [
   }
 ]
 // stock code above, my code below
-// Import React and useState hook
-import React, { useState } from 'react';
+
+const { useState } = React;
