@@ -37,3 +37,4 @@ Displays the quantity select box only if the t-shirt's remaining stock is greate
 Clicking on the buy button decreases the corresponding t-shirt's remaining stock
 
 Clicking on the buy button decrease the corresponding t-shirt's remaining stock by the selected quantity
+
