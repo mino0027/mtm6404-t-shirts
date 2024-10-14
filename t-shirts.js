@@ -81,8 +81,10 @@ function TShirt({ tshirt }) {
       <h2>{tshirt.title}</h2>
       <img src={tshirt.image} alt={tshirt.title} />
       <p>Price: ${tshirt.price}</p> 
-      <p>Stock: {stock > 0 ? stock : "Out of Stock, sorry!"}</p> 
+      <p className={stock > 0 ? "" : "out"}>
+      Stock: {stock > 0 ? stock : "Out of Stock, sorry!"}</p>
       {stock > 0 && ( // stock > 0 means that if the stock is greater than 0, the dropdown will appear, if not, the out of stock message will show. this is done by && which is a logical operator that only returns the second value if the first value is true. in this case, if stock is greater than 0, the dropdown will appear. if not, the out of stock message will appear
+      // finally, <p className={stock > 0 ? "" : "out"}> Stock: {stock > 0 ? stock : "Out of Stock"}</p> is basically saying this will be given a class of "out" if the stock is 0, and if the stock is greater than 0, it will be given an empty string which we provide immediately with stock > 0 ? and now this will allow us to make the out of stock message red. I tried just giving the p tag a class but it makes everything red so this way we can only affect the actual string "Out of Stock" and not the other parts of the p tag
         //what <> does is it allows a return of multiple elements without having to wrap them in a div, as it's a shorthand for a div
         <>
           <select value={quantity} onChange={(e) => setQuantity(Number(e.target.value))}>
