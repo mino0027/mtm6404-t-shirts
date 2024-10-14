@@ -84,7 +84,7 @@ function TShirt({ tshirt }) {
       <p>Stock: {stock > 0 ? stock : "Out of Stock, sorry!"}</p> 
       {stock > 0 && ( // stock > 0 means that if the stock is greater than 0, the dropdown will appear, if not, the out of stock message will show. this is done by && which is a logical operator that only returns the second value if the first value is true. in this case, if stock is greater than 0, the dropdown will appear. if not, the out of stock message will appear
         //what <> does is it allows a return of multiple elements without having to wrap them in a div, as it's a shorthand for a div
-        <> 
+        <>
           <select value={quantity} onChange={(e) => setQuantity(Number(e.target.value))}>
             {[...Array(stock).keys()].map((value) => ( //creating the quantity dropdown
               <option key={value + 1} value={value + 1}>
@@ -102,7 +102,7 @@ function TShirt({ tshirt }) {
 // TShirtList component
 function TShirtList({ tshirts }) {
   return (
-    <div>
+    <div className="product">
       {tshirts.map((tshirt) => (
         <TShirt key={tshirt.title} tshirt={tshirt} />
       ))}
