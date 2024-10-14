@@ -1,5 +1,5 @@
 # T-Shirts
-
+cminosora 040864887 - Web Dev Monday October 14
 ## Objective
 Use the React framework and the provided files to create a t-shirt storefront.
 
